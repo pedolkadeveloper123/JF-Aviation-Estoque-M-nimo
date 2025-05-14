@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JF Aviation - Estoque Mínimo</title>
+  <link rel="stylesheet" href="style.css" /> 
+</head>
+<body>
+
+  <!-- Tela de Login -->
+  <div id="login-screen">
+    <div class="container">
+      <h2>JF Aviation</h2>
+      <h3>Acesso ao Sistema</h3>
+      <input type="text" id="username" placeholder="Usuário" />
+      <input type="password" id="password" placeholder="Senha" />
+      <button id="login-btn">Entrar</button>
+      <p id="login-error" class="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- Tela Principal -->
+  <div id="app" class="hidden">
+    <div class="container">
+      <h2>Controle de Estoque Mínimo</h2>
+
+      <div>
+        <input type="text" id="product-name" placeholder="Nome do produto" />
+        <input type="number" id="product-qty" placeholder="Quantidade atual" />
+        <input type="number" id="product-min" placeholder="Estoque mínimo" />
+        <button onclick="addProduct()">Adicionar Produto</button>
+        <button onclick="logout()">Sair</button>
+        <button onclick="toggleDarkMode()">Modo Escuro</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Qtd Atual</th>
+            <th>Qtd Mínima</th>
+            <th>Status</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody id="products-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
