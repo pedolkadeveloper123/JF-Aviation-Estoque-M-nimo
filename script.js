@@ -11,7 +11,7 @@ document.getElementById("login-btn").addEventListener("click", function () {
     document.getElementById("app").classList.remove("hidden");
     loadProducts();
   } else {
-    error.textContent = "Usuário ou senha incorretos.";   
+    error.textContent = "Usuário ou senha incorretos.";
   }
 });
 
@@ -65,10 +65,12 @@ function loadProducts() {
       <td>${product.qty}</td>
       <td>${product.min}</td>
       <td class="${lowStock}">${product.qty < product.min ? "Abaixo do mínimo" : "OK"}</td>
-      <td><button onclick="deleteProduct(${index})">Remover</button></td>
+      <td><button onclick="deleteProduct(${index})"><i data-feather="trash-2"></i> Remover</button></td>
     `;
     table.appendChild(row);
   });
+
+  feather.replace();
 }
 
 function toggleDarkMode() {
