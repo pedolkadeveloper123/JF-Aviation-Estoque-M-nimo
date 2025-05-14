@@ -7,7 +7,7 @@ body {
 
 .container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 40px auto 100px;
   background-color: #fff;
   padding: 30px;
   border-radius: 12px;
@@ -39,6 +39,9 @@ button {
   margin: 5px;
   font-weight: bold;
   transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 button:hover {
@@ -100,20 +103,62 @@ th {
   height: 100vh;
 }
 
-#login-screen input {
+.login-container input {
   display: block;
   width: 250px;
   margin-bottom: 12px;
   padding: 10px;
 }
 
-#login-screen button {
-  width: 100%;
-  max-width: 180px;
+.logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.logo.small {
+  width: 60px;
+  margin-right: 10px;
 }
 
 .hidden {
   display: none;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a3c6e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Animações */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .error-msg {
