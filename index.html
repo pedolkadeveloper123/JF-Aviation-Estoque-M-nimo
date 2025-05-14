@@ -4,34 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JF Aviation - Estoque Mínimo</title>
-  <link rel="stylesheet" href="style.css" /> 
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
   <!-- Tela de Login -->
   <div id="login-screen">
-    <div class="container">
+    <div class="container login-container fade-in">
+      <img src="logo-jf.png" alt="JF Aviation" class="logo" />
       <h2>JF Aviation</h2>
       <h3>Acesso ao Sistema</h3>
       <input type="text" id="username" placeholder="Usuário" />
       <input type="password" id="password" placeholder="Senha" />
-      <button id="login-btn">Entrar</button>
+      <button id="login-btn"><i data-feather="log-in"></i> Entrar</button>
       <p id="login-error" class="error-msg"></p>
     </div>
   </div>
 
   <!-- Tela Principal -->
   <div id="app" class="hidden">
-    <div class="container">
+    <header class="app-header">
+      <img src="logo-jf.png" alt="JF Aviation" class="logo small" />
       <h2>Controle de Estoque Mínimo</h2>
+    </header>
 
+    <div class="container fade-in">
       <div>
         <input type="text" id="product-name" placeholder="Nome do produto" />
         <input type="number" id="product-qty" placeholder="Quantidade atual" />
         <input type="number" id="product-min" placeholder="Estoque mínimo" />
-        <button onclick="addProduct()">Adicionar Produto</button>
-        <button onclick="logout()">Sair</button>
-        <button onclick="toggleDarkMode()">Modo Escuro</button>
+        <button onclick="addProduct()"><i data-feather="plus-circle"></i> Adicionar</button>
+        <button onclick="logout()"><i data-feather="log-out"></i> Sair</button>
+        <button onclick="toggleDarkMode()"><i data-feather="moon"></i> Modo Escuro</button>
       </div>
 
       <table>
@@ -49,6 +54,13 @@
     </div>
   </div>
 
+  <footer class="footer">
+    &copy; 2025 JF Aviation. Todos os direitos reservados.
+  </footer>
+
   <script src="script.js"></script>
+  <script>
+    feather.replace();
+  </script>
 </body>
 </html>
