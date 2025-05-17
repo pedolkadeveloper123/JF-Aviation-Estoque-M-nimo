@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JF Aviation - Estoque Mínimo</title>
-   <link rel="icon" href="https://cdn-icons-png.freepik.com/256/17804/17804433.png?semt=ais_hybrid" type="image/png">
+  <link rel="icon" href="https://cdn-icons-png.freepik.com/256/17804/17804433.png?semt=ais_hybrid" type="image/png">
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -14,7 +14,6 @@
   <div id="login-screen">
     <div class="container login-container fade-in">
       <img src="https://i.postimg.cc/7YWYdvcy/logo-jf.png" alt="JF Aviation" class="logo" />
-      <h2></h2>
       <h3>Acesso ao Sistema</h3>
       <input type="text" id="username" placeholder="Usuário" />
       <input type="password" id="password" placeholder="Senha" />
@@ -31,10 +30,12 @@
     </header>
 
     <div class="container fade-in">
-      <div>
+      <div class="input-group">
         <input type="text" id="product-name" placeholder="Nome do produto" />
         <input type="number" id="product-qty" placeholder="Quantidade atual" />
         <input type="number" id="product-min" placeholder="Estoque mínimo" />
+      </div>
+      <div class="button-group">
         <button onclick="addProduct()"><i data-feather="plus-circle"></i> Adicionar</button>
         <button onclick="logout()"><i data-feather="log-out"></i> Sair</button>
         <button onclick="toggleDarkMode()"><i data-feather="moon"></i> Modo Escuro</button>
