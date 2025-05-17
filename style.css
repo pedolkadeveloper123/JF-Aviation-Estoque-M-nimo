@@ -20,6 +20,12 @@ h2, h3 {
   margin-bottom: 20px;
 }
 
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 input {
   width: calc(33.33% - 10px);
   margin: 5px;
@@ -45,7 +51,7 @@ button {
 }
 
 button:hover {
-  background-color: #e80c0c;
+  background-color: #b00909;
 }
 
 table {
@@ -145,7 +151,6 @@ th {
   font-size: 14px;
 }
 
-/* Animações */
 .fade-in {
   animation: fadeIn 0.8s ease-in-out both;
 }
@@ -164,4 +169,11 @@ th {
 .error-msg {
   color: red;
   margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
 }
